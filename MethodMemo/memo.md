@@ -47,6 +47,8 @@ NodeやElementなどのDOMオブジェクトには、親子関係を表すプロ
 ## DOM操作 プロパティ
 
 * Node: DOMツリーを構成する個々のオブジェクト。
+* Element: Nodeの種別がElementタイプ(HTML要素)のものを指す。
+  * Documentが継承するオブジェクトの中にある全ての要素オブジェクト(すなわち、要素を表現するオブジェクト)が継承する、最も一般的な基底クラスです。全ての種類の要素の共通するメソッドとプロパティのみを持ちます。もっと具体的なクラスがElementを継承しています。
 
 ### parentElement
 戻り値: Element
@@ -79,44 +81,55 @@ MDN: Nodeインターフェースの読み取り専用プロパティであり�
 MDN: Element.firstElementChildは読み取り専用のプロパティで、要素の最初の子をElementで返す。
 子要素がない場合はnullを返します。
 
-
 ### firstChild
 戻り値: Node
 説明: childNodesで取得される配列風オブジェクトの最初の要素を返す。
-MDN:
+MDN: firstChildはNodeインターフェースの読み取り専用プロパティで、ツリー内におけるこのノードの最初の子、またはこのノードに子がない場合はnullを返します。
 
 ### lastElementChild
 戻り値: Element
 説明: childrenで取得される配列風オブジェクトの最後の要素を返す。
-MDN:
+MDN: Document.lastElementChildは読み取り専用プロパティで、この文書の最後の子要素(Element)、または子要素がない場合はnullを返します。
 
 ### lastChild
 戻り値: Node
 説明: childNodesで取得される配列風オブジェクトの最後の要素を返す。
-MDN:
+MDN: lastChildはNodeインターフェースの読み取り専用プロパティで、このノードの最後の子ノードを返します。子ノードがない場合はnullを返します。
 
 ### previousElementSibling
 戻り値: Element
 説明: 自要素と兄弟関係にある1つ前のElementを返す。
-MDN:
+MDN: Element.previousElementSiblingは読み取り専用プロパティで、この要素(Element)の親の子リスト内ですぐ前にある要素を返します。このノードがリストの最初のノードであった場合はnullを返します。
 
 ### previousSibling
 戻り値: Node
 説明: 自要素と兄弟関係にある1つ前のNodeを返す。
-MDN:
+MDN: Nodeインターフェースの読み取り専用プロパティで、指定されたノードの親ノードのchildNodesリスト内で、直前にあるノードを返します。指定されたノードがリストの先頭にあった場合はnullを返します。
+
 
 ### nextElementSibling
 戻り値: Element
 説明: 自要素と兄弟関係にある1つ後のElementを返す
-MDN:
+MDN: Element.nextElementSiblingは読み取り専用プロパティで、この要素の親の子リスト内ですぐ次にある要素を返します。
+このノードがリストの最後のノードであった場合はnullを返します。
 
 ### nextSibling
 戻り値: Node
 説明: 自要素と兄弟関係にある1つ後のNodeを返す。
-MDN:
+MDN: Nodeインターフェースの読み取り専用プロパティで、指定されたノードの親のchildNodesの中で、そのすぐ次のノードを
+返します。または、指定されたノードが親要素の最後の子要素である場合はnullを返します。
 
+### textContent
+Nodeのプロパティで、ノードおよびその子孫のテキストの内容を表します。
 
+### ownerDocument
+Nodeインターフェースの読み取り専用プロパティで、このノードの最上位の文書オブジェクトを返します。
 
+### nodeValue
+Nodeインターフェースのプロパティで、現在のノードの値を返したり設定したりします。
+
+### nodeName
+Nodeの読み取り専用プロパティで、現在のノードの名前を文字列で返します。
 
 
 ## DOM操作Method
@@ -128,3 +141,5 @@ DocumentのquerySelectorメソッドは、指定されたセレクターまた�
 ### querySelectorAll
 querySelectorAllメソッドは、指定されたCSSセレクターに一致する文章中の要素のリストを示す静的な(生きていない)NodeListを返します。
 
+
+### getElementById
