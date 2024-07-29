@@ -44,7 +44,7 @@ ElementとNodeのツリーは、それぞれDocumentオブジェクト(document)
 NodeやElementなどのDOMオブジェクトには、親子関係を表すプロパティがある。
 
 
-## DOM操作 プロパティ
+## DOM操作(Node) プロパティ
 
 * Node: DOMツリーを構成する個々のオブジェクト。
 * Element: Nodeの種別がElementタイプ(HTML要素)のものを指す。
@@ -132,7 +132,35 @@ Nodeインターフェースのプロパティで、現在のノードの値を�
 Nodeの読み取り専用プロパティで、現在のノードの名前を文字列で返します。
 
 
-## DOM操作Method
+## DOM操作(Node) Method
+
+### appendChild
+
+
+
+
+## DOM操作(Document) 
+* Node(DOM)
+DOMとしてのnodeは、node tree内の1点を指しています。
+nodeはドキュメント自身でありElement(要素)やテキスト、コメントなどの色々なものがあります。
+
+* selector(セレクター)
+CSSセレクターはCSSのルールの一部で、文章中のどの要素がルールと一致するかを記述します。
+一致した要素にはルールで指定されたスタイルが適用されます。
+
+### adoptNode
+ノードを他の文書からメソッドの文章へ移譲します。
+取り込まれたノードおよびそのサブツリーは(もしあれば)元の文章から削除され、ownerDocumentが現在の文章に変更されます。
+その後、ノードを現在の文書に挿入することができます。
+
+### append
+一連のNodeオブジェクトまたは文字列オブジェクトを、この文章の最後の子の後に挿入します。
+文字列オブジェクトは等価なTextノードとして挿入されます。
+
+
+### close
+Document.open()で開かれた文章への書き込みを終了します。
+
 
 ### querySelector
 DocumentのquerySelectorメソッドは、指定されたセレクターまたはセレクター群に一致する、文書内の最初のElementを返します。
@@ -141,5 +169,21 @@ DocumentのquerySelectorメソッドは、指定されたセレクターまた�
 ### querySelectorAll
 querySelectorAllメソッドは、指定されたCSSセレクターに一致する文章中の要素のリストを示す静的な(生きていない)NodeListを返します。
 
-
 ### getElementById
+Documentインターフェースのメソッドで、idプロパティが指定された文字列に一致する要素を表すElementオブジェクトを返します。
+要素のIDは指定されていれば固有であることが求められているため、特定の要素に素早くアクセスするには便利な方法です。
+
+### getElementsByClassName
+Documentインターフェースのメソッドで、指定されたクラス名を全て持つすべての子要素の配列風オブジェクトを返します。
+
+### getElementsByName
+Documentオブジェクトのメソッドで、文章中で指定したnameをもつ要素のNodeListコレクションを返します。
+
+### getElementsByTagName
+Documentインターフェースのメソッドで、指定されたタグ名を持つ要素のHTMLCollectionを返します。
+
+### getElementsByTagNameNS
+指定された名前空間の指定されたタグ名を持つ要素のリストを返します。
+ルートノードを含めて、文章全体が検索されます。
+
+
