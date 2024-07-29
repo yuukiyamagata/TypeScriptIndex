@@ -46,3 +46,9 @@ TypeScriptをJavaScriptにコンパイル(変換)する強力なコンパイラ�
   // → TypeScriptは開発者が、より良い正しいコードを書くことを支援するツール
 ```
 
+### TypeScriptはコンパイラである
+TypeScriptはプログラミング言語であるが、コンパイラがあることで初めて動かすことができる。
+このコンパイラはTypeScriptをJavaScriptにコンパイルするためのツール。
+
+### tscコマンド
+TypeScriptのコンパイラを起動するためのコマンド。
