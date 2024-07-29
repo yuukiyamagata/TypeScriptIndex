@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/yuukiyamagata/TypeScriptIndex/issues"
   },
-  "homepage": "https://github.com/yuukiyamagata/TypeScriptIndex#readme"
+  "homepage": "https://github.com/yuukiyamagata/TypeScriptIndex#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
 }
