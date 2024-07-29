@@ -1,8 +1,12 @@
 
-let element = document.getElementById("div-03").previousElementSibling;
-document.write("<p>Sibling of div-03</p><ol>");
-while(element){
-  document.write("<li>"  + element.nodeName + " "  + element.textContent + "</li>")
-  element = element.previousElementSibling;
-}
-document.write("</ol>");
+const container = document.getElementById("container");
+console.log(container);
+
+const span = document.getElementsByClassName("target-cls");
+console.log(span);
+
+const input = document.getElementsByName("child3");
+console.log(input);
+
+const p = document.getElementsByTagName("p");
+console.log(p);
