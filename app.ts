@@ -1,23 +1,19 @@
-// const person: {
-//   name: string;
-//   age: number;
-// }
-const person = {
-  name: "yota",
-  age: 30,
-  hobbies:["Sports", "Cooking"],
-  role: [2, "author"]
+let userInput: unknown;
+let userName: string;
+
+userInput = 5;
+userInput = "Max";
+
+// userName  = userInput;
+// userInputがstring型であるということが保証されていないためエラーが出る
+
+if(typeof userInput === "string"){
+  userName = userInput;
 }
 
-person.role.push("admin");
-person.role[1] = 10;
-
-const number1 = 10;
-let favoriteActivities: string[];
-favoriteActivities = ["Sports"];
-
-console.log(person.name);
-
-for(const hobby of person.hobbies){
-  console.log(hobby);
+function generateError(message: string, code: number):void {
+  throw { message: message, errorCode: code };
 }
+
+const result = generateError("エラーが発生しました", 500);
+console.log(result);
