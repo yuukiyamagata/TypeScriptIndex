@@ -28,7 +28,10 @@ compilerOptionsはTypeScriptのファイルがどのようにコンパイルさ�
 - files: ファイル単位のみで指定することができる。
 - target: どのversionのJavaScriptをターゲットにしてTypeScriptをコンパイルするかという設定する。
 - lib: TypeScriptでコードをかくときに、どのようなObjectや機能がでdefaultで使えるかということを指定するオプション。
-- allowJs: 
-- checkJs
+- allowJs: JavaScriptもコンパイル対象にできるという設定。
+- checkJs: JavaScriptをコードのチェック対象にできるという設定。
+- sourceMap: デバックに役立つオプション。
+- rootDir
+- outDir
 
 
