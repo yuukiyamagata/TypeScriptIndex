@@ -3,7 +3,7 @@ let logged;
 const sendAnalytics = (data: string) => {
   console.log(data);
   logged = true;
-  logged = "Max";
+  logged = "Max"
   console.log(logged);
 }
 

@@ -41,15 +41,22 @@ compilerOptionsはTypeScriptのファイルがどのようにコンパイルさ�
     - forループを使用していてかつ、その動作がうまく動作しないという場合に限ってonにする。
 - noEmitOnError: 何かコンパイルエラーが出る場合はJavaScriptを出力しない。
 
-- strict: TypeScriptの型チェックを厳格にする。
-    - noImplicitAny: any型をエラーとして出力する。より良いコードを書くために寄与する。
-    - strictNullChecks: NullかもしれないObjectにアクセスするときに確実にそれがNullではないということを厳格にチェックするオプション。
-    - strictFunctionTypes: 関数の型に関して厳格にチェックするためのオプション。パラメータや戻り値に関するチェック。
-    - strictBindCallApply: bind,call,applyのメソッドへの引数がオリジナルの関数と合致しているかどうかということをチェックする。
-    - strictPropertyInitialization: Classのプロパティの初期化に関するオプション。
-    - noImplicitThis: thisを使用するときに、暗黙的にany型になる場合にエラーを表示するオプション
-    - alwaysStrict: JavaScriptを出力する際に、必ず"use strict"を使用する。
-    
+### strict: TypeScriptの型チェックを厳格にする。
+
+- noImplicitAny: any型をエラーとして出力する。より良いコードを書くために寄与する。
+- strictNullChecks: NullかもしれないObjectにアクセスするときに確実にそれがNullではないということを厳格にチェックするオプション。
+- strictFunctionTypes: 関数の型に関して厳格にチェックするためのオプション。パラメータや戻り値に関するチェック。
+- strictBindCallApply: bind,call,applyのメソッドへの引数がオリジナルの関数と合致しているかどうかということをチェックする。
+- strictPropertyInitialization: Classのプロパティの初期化に関するオプション。
+- noImplicitThis: thisを使用するときに、暗黙的にany型になる場合にエラーを表示するオプション
+- alwaysStrict: JavaScriptを出力する際に、必ず"use strict"を使用する。
+
+### Additional Checks
+コード品質に寄与するオプション
+- noUnusedLocals: 未使用のローカル変数がある場合にエラーを出力する。   
+- noUnusedParameters: 未使用の関数の実引数がある場合にエラーを出力する。
+- noImplicitReturns: ある関数がある時は値を返して、ある時は値を返さないという場合にエラーを返す。
 
 
-
+### Advanced Options
+- forceConsistentCasingInFileNames: ファイル名の大文字小文字が正しいかどうかを判断する。
