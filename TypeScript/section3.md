@@ -45,7 +45,11 @@ compilerOptionsはTypeScriptのファイルがどのようにコンパイルさ�
     - noImplicitAny: any型をエラーとして出力する。より良いコードを書くために寄与する。
     - strictNullChecks: NullかもしれないObjectにアクセスするときに確実にそれがNullではないということを厳格にチェックするオプション。
     - strictFunctionTypes: 関数の型に関して厳格にチェックするためのオプション。パラメータや戻り値に関するチェック。
-    - 
+    - strictBindCallApply: bind,call,applyのメソッドへの引数がオリジナルの関数と合致しているかどうかということをチェックする。
+    - strictPropertyInitialization: Classのプロパティの初期化に関するオプション。
+    - noImplicitThis: thisを使用するときに、暗黙的にany型になる場合にエラーを表示するオプション
+    - alwaysStrict: JavaScriptを出力する際に、必ず"use strict"を使用する。
+    
 
 
 
