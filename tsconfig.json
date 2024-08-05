@@ -114,7 +114,10 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
-  "exclude": ["src/section2/*"],
-  "include": ["src/section3/app.ts", "src/section3/analytics.ts"],
+  "exclude": [
+    "src/section2/*",
+    "src/section3/*"
+  ],
+  "include": ["src/section4/app.ts"],
   // "files": ["app.ts"]
 }
